@@ -1,0 +1,20 @@
+summa = 0
+
+
+def digit(m):
+
+    global summa
+
+    if summa == 0:
+        summa += m % 10
+        digit(m // 10)
+    elif m % 10 == m:
+        summa += m
+    else:
+        digit(m // 10)
+
+
+digit(int(input()))
+
+print(summa)
+
